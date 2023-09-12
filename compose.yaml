@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  us:
+    build:
+      context: ./us
+      dockerfile: Dockerfile
+      target: base
+    container_name: us
+    volumes:
+      - ./us/root:/root
+    command: npm --timing i -g @tw/cli@0.1.91-beta.2
+  us-central1:
+    build:
+      context: ./us-central1
+      dockerfile: Dockerfile
+      target: base
+    container_name: us-central1
+    volumes:
+      - ./us-central1/root:/root
+    command: npm --timing i -g @tw/cli
+
