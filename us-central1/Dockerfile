@@ -3,7 +3,8 @@ FROM node:18-bullseye-slim AS base
 WORKDIR /root
 
 COPY ./npmrc /usr/local/etc/npmrc
-COPY ./run_npm.sh ./run_npm.sh
+COPY ./run_npm.sh /usr/local/bin/run_npm
+RUN chmod +x /usr/local/bin/run_npm
 
 RUN apt-get update && apt-get install -y curl jq && \
     apt-get clean && \

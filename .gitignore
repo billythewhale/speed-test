@@ -1,4 +1,6 @@
 **/node_modules/
 **/root/.npm/
 **/root/package*
+**/root/*.log
+**/root/*.json
 **/npmrc

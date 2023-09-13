@@ -8,7 +8,7 @@ services:
     container_name: us
     volumes:
       - ./us/root:/root
-    command: chmod +x /root/run_npm.sh && cd /root && ./run_npm.sh
+    command: run_npm
   us-central1:
     build:
       context: ./us-central1
@@ -17,5 +17,5 @@ services:
     container_name: us-central1
     volumes:
       - ./us-central1/root:/root
-    command: chmod +x /root/run_npm.sh && cd /root && ./run_npm.sh
+    command: run_npm
 
